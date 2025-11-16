@@ -1,35 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
     <style>
-        *{
-            margin:0;
-            padding:0;
+        * {
+            margin: 0;
+            padding: 0;
         }
-         body{
-         font-family:Verdana, Geneva, Tahoma, sans-serif
+
+        /* 
+        div {
+            border: 1px solid black;
+        } */
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif
         }
-        header{
-            padding:2em;
-            background: linear-gradient(to right, rgb(253, 102, 122),rgb(202, 34, 34), purple);
+
+        header {
+            padding: 2em;
+            background: linear-gradient(to right, rgb(253, 102, 122), rgb(202, 34, 34), purple);
         }
-   
-        h1{
+
+        h1 {
             display: flex;
-            padding:2vw;
+            padding: 2vw;
             justify-content: center;
             font-size: 80px;
             font-weight: lighter;
         }
+
+        .content {
+            margin: 10px;
+        }
+
+        .center {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        /* Grid для нескольких полей (например Gender, Status и т.д.) */
+        .center-3 {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        /* Grid для длинных групп вроде Yes/No/Plan Choice */
+        .center-wide {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        /* Grid для подписи */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin: 20px 10px;
+        }
+
+        .p1 {
+            font-size: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        thead {
+            margin-bottom: 10px;
+        }
+
+        tr,
+        td {
+            border: 2px solid gray;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
+
 <body>
     <header></header>
     <h1>Application From</h1>
-    <p>General Questions</p>
+    <div class="content">General Questions
+        <div class="center">
+            <div>
+                <p>Proposed Insured's Name:</p>
+                <p class="p1">(Please use capital letters)</p>
+            </div>
+            <table class="top">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Continue General Questions -->
+            <div class="center">
+                <div>
+                    <p>Gender:</p>
+                </div>
+                <div>
+                    <input type="checkbox"> Male
+                    &nbsp;&nbsp;
+                    <input type="checkbox"> Female
+                </div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Passport No:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Address:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Phone Number:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Email Address:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>ID Number:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Social Security Number:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Status:</p>
+                </div>
+                <div>
+                    <input type="checkbox"> Single
+                    &nbsp;&nbsp;
+                    <input type="checkbox"> Married
+                    &nbsp;&nbsp;
+                    <input type="checkbox"> Devored
+                    &nbsp;&nbsp;
+                    <input type="checkbox"> Others
+                </div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Occupation:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Are you a retiree?</p>
+                </div>
+                <div>
+                    <input type="checkbox"> Yes
+                    &nbsp;&nbsp;
+                    <input type="checkbox"> No
+                </div>
+            </div>
+
+
+            <!-- PERSONAL DETAILS SECTION -->
+            <h2 style="margin-top:20px; font-size:20px;">Personal Details</h2>
+
+            <div class="center">
+                <div>
+                    <p>Name of Beneficiary:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Bank Account (or ID number):</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Name & Address of beneficiary’s bank:</p>
+                </div>
+                <div>
+                    ______________________________________<br>
+                    ______________________________________<br>
+                    ______________________________________
+                </div>
+            </div>
+
+            <div class="center-wide">
+                <div>
+                    <p>Employee:</p>
+                </div>
+                <div>
+                    <input type="checkbox"> Yes
+                    &nbsp;&nbsp;<input type="checkbox"> No
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    Plan Choice: ________________________
+                </div>
+            </div>
+
+            <div class="center-wide">
+                <div>
+                    <p>Spouse:</p>
+                </div>
+                <div>
+                    <input type="checkbox"> Yes
+                    &nbsp;&nbsp;<input type="checkbox"> No
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    Plan Choice: ________________________
+                </div>
+            </div>
+
+            <div class="center-wide">
+                <div>
+                    <p>Children:</p>
+                </div>
+                <div>
+                    <input type="checkbox"> Yes
+                    &nbsp;&nbsp;<input type="checkbox"> No
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    Plan Choice: ________________________
+                </div>
+            </div>
+
+
+            <!-- PLAN GRID -->
+            <h2 style="margin-top:20px; font-size:20px;">Plans</h2>
+
+            <div class="plans-grid">
+                <div class="plan-box">
+                    <input type="checkbox"> <b>PLAN A</b><br><br>
+                    Starting from $25 per week<br>
+                    (prices excl. VAT, activation fees apply)<br>
+                    See more details on page 17
+                </div>
+
+                <div class="plan-box">
+                    <input type="checkbox"> <b>PLAN B</b>
+                    <span style="color:red;">JOIN NOW!</span><br><br>
+                    Starting from THB $21 per week<br>
+                    (prices excl. VAT)<br>
+                    See more details on page 17
+                </div>
+            </div>
+
+
+            <!-- POLICY GRID -->
+            <h2 style="margin-top:20px; font-size:20px;">The Policy</h2>
+
+            <div class="center">
+                <div>
+                    <p>Units:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Annual Premium:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Payment Mode:</p>
+                </div>
+                <div>
+                    <input type="checkbox"> Annual
+                    &nbsp;&nbsp;
+                    <input type="checkbox"> Semi-Annual
+                    &nbsp;&nbsp;
+                    <input type="checkbox"> Monthly PAT
+                </div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Cash With Application:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+            <div class="center">
+                <div>
+                    <p>Planned Modal Premium:</p>
+                </div>
+                <div>______________________________________</div>
+            </div>
+
+
+            <!-- FOOTER GRID -->
+            <h2 style="margin-top:25px; font-size:20px;">Terms & Conditions</h2>
+
+            <div style="margin: 10px;">
+                Improvement should be measured regularly and assessed in order<br>
+                for you to know what’s beneficial and what is not.
+            </div>
+
+            <div class="footer-grid">
+                <div>
+                    <p>Signature:</p>
+                    <div style="width:200px; height:50px; border:2px solid black; font-size:30px; text-align:center;">
+                        x
+                    </div>
+                </div>
+
+                <div>
+                    <p>Date:</p>
+                    _________________________
+                </div>
+            </div>
+
+
+
 
 </body>
+
 </html>
